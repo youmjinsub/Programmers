@@ -1,0 +1,23 @@
+알파벳으로 이루어진 문자열 myString이 주어집니다. 모든 알파벳을 소문자로 변환하여 return 하는 solution 함수를 완성해 주세요.
+
+
+
+#include <string>
+#include <vector>
+#include <cctype>
+using namespace std;
+
+string solution(string myString) {
+    string answer = "";
+    for(int i = 0; i < myString.size(); i++ )
+    {
+        if(myString[i]>='A' && myString[i]<='Z')
+        {
+            myString[i] = tolower(myString[i]);
+            
+        }
+            
+    }
+    answer = myString;
+    return answer;
+}
