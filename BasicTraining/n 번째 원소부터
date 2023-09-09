@@ -12,3 +12,24 @@ vector<int> solution(vector<int> num_list, int n) {
     
     return answer;
 }
+
+
+------------------------------------------------
+
+원래 시도 하던거 해결 
+
+
+#include <string>
+#include <vector>
+
+using namespace std;
+
+vector<int> solution(vector<int> num_list, int n) {
+    int len = num_list.size() -n + 1;
+    vector<int> answer(len);
+    for(int i=0; i < len; i++)
+    {
+        answer[i] = num_list[n-1+i];
+    }
+    return answer;
+}
