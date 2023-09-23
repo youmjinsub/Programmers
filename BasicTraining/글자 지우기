@@ -1,0 +1,21 @@
+문자열 my_string과 정수 배열 indices가 주어질 때,
+
+my_string에서 indices의 원소에 해당하는 인덱스의 글자를 지우고 이어 붙인 문자열을 return 하는 solution 함수를 작성해 주세요.
+
+
+#include <string>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+string solution(string my_string, vector<int> indices) {
+    string answer = "";
+    sort(indices.begin(), indices.end(), greater<int>());
+// 오름차순으로 지울경우 다음 인덱스가 밀려 내림차순으로 지우기 시작
+    for(int i = 0; i < indices.size(); i++){
+            my_string.erase(indices[i], 1);
+    }
+    answer = my_string;
+    return answer;
+}
